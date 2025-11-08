@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #2d3748;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.sales-button-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sales-button {
+  background: linear-gradient(45deg, #667eea, #764ba2);
   color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.sales-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sales-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.result-box {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 20px;
+  border-left: 4px solid #667eea;
+}
+
+.result-box.loading {
+  opacity: 0.7;
+}
+
+.result-box p {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.click-counter {
+  font-size: 0.9rem;
+  color: #718096;
+  font-style: italic;
+}
+
+.recent-letters {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.recent-letters h3 {
+  color: #4a5568;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.recent-letters ul {
+  list-style: none;
+}
+
+.recent-letters li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.recent-letters li:last-child {
+  border-bottom: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  color: #a0aec0;
+  font-size: 0.9rem;
 }
